@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git credentialsId: 'github', url: 'git@github.com:sathishbob/jenkins_test.git'
+                git credentialsId: 'github', url: 'https://github.com/subhashv-agi/jenkins_test.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true -f api-gateway clean package"
